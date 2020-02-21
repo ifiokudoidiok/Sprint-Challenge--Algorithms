@@ -95,9 +95,35 @@ class SortingRobot:
     def sort(self):
         """
         Sort the robot's list.
+        We have a robot that needs to sort. 
+        the most suiting sorting algorothm that goes with this is the bubble sort
+
+    
         """
-        # Fill this out
-        pass
+        # If robot cannot move right, leave the function (Base case)
+        if self.can_move_right() is False:
+            pass
+        # Else swap items
+        else:
+            self.swap_item()
+            # If robot can move right
+            while self.can_move_right():
+                # Robot should move to next position
+                self.move_right()
+                # compare item at hand to current item in list
+                self.compare_item()
+                # if item at hand is greater than current item in list
+                if self.compare_item() == 1:
+                    # swap items
+                    self.swap_item()
+
+            while self.compare_item() is not None:
+                self.move_left()
+            self.swap_item()
+            self.move_right()
+
+            return self.sort()
+
 
 
 if __name__ == "__main__":
