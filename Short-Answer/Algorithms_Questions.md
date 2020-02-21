@@ -8,8 +8,8 @@ pseudocode with respect to the input size n of each of the following:
 ```python
 a)  a = 0 #O(1)
     while (a < n * n * n): #O(n) + O(1)
-      a = a + n * n 
-      # O(1)
+      a = a + n * n # O(1)
+      
       #O(1) + O(n) + O(1)
           # O(2) + O(n)
           #O(n)
